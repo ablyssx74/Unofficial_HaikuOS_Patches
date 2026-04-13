@@ -5,6 +5,9 @@
  * Authors:
  *    Dario Casalinuovo
  *    Marcus Overhagen
+ *
+ *	AI assisted patch by Kris Beazley AKA ablyss Copyright 2026
+ *
  */
 
 
