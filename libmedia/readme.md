@@ -1,6 +1,5 @@
-Disclaimer... AI assisted in helping this patch.<br>
-How to apply the x86_64 patch...<br>
-See <b>Source Build</b> below on how to build libmedia.so if you prefer that route.<br>
+### How to apply realtime audio in Haiku OS 
+
 
 1. Make sure have a supported audio card and it supports custom flags.<br> ( explained below step 3 )<br>
 
@@ -39,13 +38,12 @@ record_buffer_frames	1024
 record_buffer_count	4
 ```
 
-## Source Build
-To build the libmedia realtime patch yourself follow these steps.
+## How to build Haiku Source libmedia
+To build  libmedia 
 1. git clone https://review.haiku-os.org/haiku
 2. git clone https://review.haiku-os.org/buildtools if needed. See online documentation for when it's required.
-3. Replace haiku/src/kits/media/TimeSource.cpp with the TimeSource.cpp in this repo
-4. cd haiku
-5. ./configure --target-arch x86_64 ( apply your --target-arch if different )
-6. jam -q libmedia.so
-7. cp generated/objects/haiku/x86_64/release/kits/media/libmedia.so /boot/system/non-packaged/lib/
-8. Restart Media Server
+3. cd haiku
+4. ./configure --target-arch x86_64 ( apply your --target-arch if different )
+5. jam -q libmedia.so
+6. cp generated/objects/haiku/x86_64/release/kits/media/libmedia.so /boot/system/non-packaged/lib/
+7. Restart Media Server
